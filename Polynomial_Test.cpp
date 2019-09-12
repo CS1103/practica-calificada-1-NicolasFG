@@ -4,7 +4,7 @@
 
 using namespace std;
 
-#define LISTA
+//#define LISTA
 
 string get_expression(Polynomial& p) {
 	stringstream ss;
@@ -19,9 +19,9 @@ TEST_CASE("Polynomial") {
 		Polynomial p = { {1, 0}, {-1, 1}, {6, 3} };
 #else
 		Polynomial p;
-		p.add({ 1, 0 });
-		p.add({ -1, 1 });
-		p.add({ 6, 3 });
+		p.add{ 1, 0 };
+		p.add{ -1, 1 };
+		p.add{ 6, 3 };
 #endif
 
 		REQUIRE(get_expression(p) == "1-1x^1+6x^3");
@@ -32,9 +32,9 @@ TEST_CASE("Polynomial") {
 		Polynomial p1 = { {1, 0}, {-1, 1}, {6, 3} };
 #else
 		Polynomial p1;
-		p1.add({ 1, 0 });
-		p1.add({ -1, 1 });
-		p1.add({ 6, 3 });
+		p1.add{ 1, 0 };
+		p1.add{ -1, 1 };
+		p1.add{ 6, 3 };
 #endif
 		auto p2 = p1;
 		p2 = p2 + 10;
